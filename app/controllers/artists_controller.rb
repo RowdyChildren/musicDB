@@ -5,6 +5,7 @@ class ArtistsController < ApplicationController
   # GET /artists.json
   def index
     @artists = Artist.all
+    @genres = Genre.all
   end
 
   # GET /artists/1
@@ -15,10 +16,12 @@ class ArtistsController < ApplicationController
   # GET /artists/new
   def new
     @artist = Artist.new
+    @genres = Genre.all
   end
 
   # GET /artists/1/edit
   def edit
+    @genres = Genre.all
   end
 
   # POST /artists
