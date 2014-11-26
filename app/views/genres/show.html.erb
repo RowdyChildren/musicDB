@@ -5,5 +5,24 @@
   <%= @genre.name %>
 </p>
 
+<p>
+
+ <b>Artists in this Genre:</b>
+
+ 
+  <ul>
+
+   <li><% @genre.artists.each do |artist| %></li>
+
+   <li><%= artist.name %></li>
+
+   <li><%= image_tag artist.img, :width => 150, class: 'img img-rounded' %></li>
+
+   <% end %>
+
+ </ul>
+
+</p>
+
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>

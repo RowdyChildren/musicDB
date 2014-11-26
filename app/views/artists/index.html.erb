@@ -1,11 +1,11 @@
 <h1>Listing artists</h1>
 
-<table>
+<table border="1">
   <thead>
     <tr>
       <th>Name</th>
       <th>Genre</th>
-      <th>img</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +15,7 @@
       <tr>
         <td><%= artist.name %></td>
         <td><%= artist.genre.name %></td>
-        <td><%=artist.img %> </td>
+        <td><%= image_tag artist.img, :width => 150, class: 'img img-rounded' %> </td>
         <td><%= link_to 'Show', artist %></td>
         <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
         <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
